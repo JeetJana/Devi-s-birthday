@@ -2,7 +2,7 @@
 // =====================================
 // 1. PERSONALIZE YOUR BIRTHDAY WEBSITE
 // =====================================
-const FRIEND_NAME = "THE GODDESS:ASHMITA❤️";
+const FRIEND_NAME = "𝑻𝑯𝑬 𝑮𝑶𝑫𝑫𝑬𝑺𝑺:𝑨𝑺𝑯𝑴𝑰𝑻𝑨❤️";
 
 // Change this to your friend's birthday.
 // Format: YYYY-MM-DD
