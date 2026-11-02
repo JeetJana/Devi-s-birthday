@@ -9,7 +9,7 @@ const FRIEND_NAME = "THE GODDESS:ASHMITA❤️";
 const BIRTHDAY_DATE = "2026-11-22";
 
 // Change this to your secret password
-const SECRET_PASSWORD = "11.22.2008";
+const SECRET_PASSWORD = "22.11.2009";
 
 document.getElementById("friendName").textContent =
     FRIEND_NAME.toUpperCase() + " 🖤";
