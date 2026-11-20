@@ -12,7 +12,7 @@ const BIRTHDAY_DATE = "2026-11-22";
 const SECRET_PASSWORD = "22.11.2009";
 
 document.getElementById("friendName").textContent =
-    FRIEND_NAME.toUpperCase() + " 🖤";
+    FRIEND_NAME.toUpperCase() + "🪷";
 
 
 // =====================================
@@ -98,24 +98,63 @@ setInterval(updateCountdown, 1000);
 
 
 // =====================================
-// 5. MUSIC PLAYER
+// 5. MUSIC PLAYER (BOTH SONGS)
 // =====================================
 
-const music = document.getElementById("birthdayMusic");
-const musicBtn = document.getElementById("musicBtn");
+const music1 = document.getElementById("birthdayMusic1");
+const music2 = document.getElementById("birthdayMusic2");
 
-musicBtn.addEventListener("click", async function () {
+const musicBtn1 = document.getElementById("musicBtn1");
+const musicBtn2 = document.getElementById("musicBtn2");
 
-    if (music.paused) {
+// FIRST MUSIC
+musicBtn1.addEventListener("click", async function () {
+
+    if (music1.paused) {
+
+        music2.pause();
+        music2.currentTime = 0;
+        musicBtn2.textContent = "▶ Play Beautiful Music";
+
         try {
-            await music.play();
-            musicBtn.textContent = "⏸ Pause Beautiful Music";
+            await music1.play();
+            musicBtn1.textContent = "⏸ Pause Birthday Music";
         } catch (error) {
-            alert("Please add a valid music.mp3 file inside the images folder.");
+            console.error(error);
+            alert("Song 1 could not play. Check the music file.");
         }
+
     } else {
-        music.pause();
-        musicBtn.textContent = "▶ Play Beautiful Music";
+
+        music1.pause();
+        musicBtn1.textContent = "▶ Play Birthday Music";
+
+    }
+
+});
+
+// SECOND MUSIC
+musicBtn2.addEventListener("click", async function () {
+
+    if (music2.paused) {
+
+        music1.pause();
+        music1.currentTime = 0;
+        musicBtn1.textContent = "▶ Play Birthday Music";
+
+        try {
+            await music2.play();
+            musicBtn2.textContent = "⏸ Pause Beautiful Music";
+        } catch (error) {
+            console.error(error);
+            alert("Song 2 could not play. Check the music file.");
+        }
+
+    } else {
+
+        music2.pause();
+        musicBtn2.textContent = "▶ Play Beautiful Music";
+
     }
 
 });
